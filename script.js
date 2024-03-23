@@ -1,4 +1,6 @@
-
+let typeFacts = 0;
+let typeJokes = 0;
+let typeInspiration = 0;
 const messageType = ['Facts', 'Jokes', 'Inspirational Quote'];
 const facts = ["Australia is wider than the moon.",
     "Venus is the only planet to spin clockwise.",
@@ -92,3 +94,19 @@ const inspiration = [
     "\"It ain't about how hard you hit. It’s about how hard you can get hit and keep moving forward.\"— Sylvester Stallone in Rocky Balboa",
     "\"If my mind can conceive it, if my heart can believe it, then I can achieve it.\"— Muhammad Ali"
 ];
+
+const chooseType = Math.floor(Math.random() * 3);
+
+switch (chooseType) {
+    case 0:
+        typeFacts = 1;
+        break;
+    case 1:
+        typeJokes = 1;
+        break;
+    case 2:
+        typeInspiration = 1;
+        break;
+    default:
+        break;
+}
