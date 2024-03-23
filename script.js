@@ -1,6 +1,7 @@
 let typeFacts = 0;
 let typeJokes = 0;
 let typeInspiration = 0;
+let chooseMessage = 0;
 const messageType = ['Facts', 'Jokes', 'Inspirational Quote'];
 const facts = ["Australia is wider than the moon.",
     "Venus is the only planet to spin clockwise.",
@@ -109,4 +110,45 @@ switch (chooseType) {
         break;
     default:
         break;
+}
+
+if(typeFacts)   {
+    chooseMessage = Math.floor(Math.random() * 27);
+    console.log("\n");
+    console.log("Wanna hear an interesting fact.\n");
+    for(let i=0; i<facts.length; i++)   {
+        if(chooseMessage === i) {
+            console.log(facts[i]);
+            console.log("\nFor more interesting facts, run again.");
+            console.log("\n");
+        } else  {
+            continue;
+        }
+    }
+} else if (typeJokes)   {
+    chooseMessage = Math.floor(Math.random() * 25);
+    console.log("\n");
+    console.log("Wanna hear an fun joke.\n");
+    for(let i=0; i<jokes.length; i++)   {
+        if(chooseMessage === i) {
+            console.log(jokes[i]);
+            console.log("\nFor more fun jokes, run again.");
+            console.log("\n");
+        } else  {
+            continue;
+        }
+    }
+} else if (typeInspiration) {
+    chooseMessage = Math.floor(Math.random() * 35);
+    console.log("\n");
+    console.log("Wanna hear some inspiration.\n");
+    for(let i=0; i<inspiration.length; i++)   {
+        if(chooseMessage === i) {
+            console.log(inspiration[i]);
+            console.log("\nFor more inspiration, run again.");
+            console.log("\n");
+        } else  {
+            continue;
+        }
+    }
 }
